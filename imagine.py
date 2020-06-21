@@ -57,6 +57,11 @@ class myRobot:
         if debug: print(self.gyro.angle)
         self.move.on(speed, speed*-1)
 
+  def nodrift(self):
+    self.gyro.mode = 'GYRO-CAL'
+    time.sleep(0.2)
+    self.gyro.mode = 'GYRO-ANG'
+
 k = myRobot("outB", "outC", gyroPort="in4")
 for i in range(4):
   k.forward(-50, 2, correction=1)
