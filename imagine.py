@@ -63,9 +63,9 @@ class myRobot:
         self.move.on(speed, speed*-1)
 
   # Will fix gyro drift when called
-  def nodrift(self):
+  def nodrift(self, t=0.2):
     self.gyro.mode = 'GYRO-CAL'
-    time.sleep(0.2)
+    time.sleep(t)
     self.gyro.mode = 'GYRO-ANG'
 
 
