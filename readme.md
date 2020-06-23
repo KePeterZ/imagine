@@ -45,7 +45,9 @@ Because if you should know anything about Python classes, it's that they make yo
 
 ## I'm sold! Do you have any documentation or tutorials?
 
-I'm currently working on writing a readthedocs, and will update this as soon as it's done. In the meanwhile, a star on this repo would be greatly appreciated!
+For installing, you can find a how-to [here](https://github.com/KePeterZ/imagine/blob/master/installing.md)
+
+For using the library, the tutorial is [here](https://github.com/KePeterZ/imagine/blob/master/tutorials.md)
 
 ## I have some optimizations for the built-in functions / want to opensource my own ones here. Can I do that?
 
