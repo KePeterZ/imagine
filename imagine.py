@@ -23,8 +23,9 @@ class myRobot:
     if motorL and motorR: 
       self.drive = MoveSteering(motorL, motorR)
       self.move = MoveTank(motorL, motorR)
+    print("Successful initialization!")
 
-  # function to go forward, by default it uses the gyro for correcting, but it can be disabled.
+  # Function to go forward, by default it uses the gyro for correcting, but it can be disabled.
   # Can use either rotations to measure distance, or time
   def forward(self, speed, distance, useRots=True, correction=2, useGyro=True, way=None): 
     initialGyro = way if way else self.gyro.angle
@@ -44,7 +45,7 @@ class myRobot:
   def stop(self, brake=False): 
     self.drive.stop(brake=brake)
 
-  # function that can turn either absolute or relative to current rotation
+  # Function that can turn either absolute or relative to current rotation
   # if way is float, then destination will be gyro.angle+way, if int, then just way
   def turn(self, way, speed, linear=False, leeway=1, debug=False, minSpeed=5):
     if type(way)==type(1.1):
@@ -67,9 +68,8 @@ class myRobot:
     time.sleep(0.2)
     self.gyro.mode = 'GYRO-ANG'
 
+
 if __name__ == "__main__":
-  k = myRobot("outB", "outC", gyroPort="in4")
-  for i in range(4):
-    k.forward(-50, 2, correction=1)
-    k.turn(90.0, -5, debug=True)
-  k.stop()
+  k = myRobot()
+  print("Initialized!")
+  
